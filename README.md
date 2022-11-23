@@ -171,5 +171,7 @@ EX:           μ = (1+3+4+7+8) / 5 = 4.6
 
 ![image](https://user-images.githubusercontent.com/75235167/203462398-1c32dc4d-a34b-4f22-8535-69a6a6452cf9.png)
 
+![image](https://user-images.githubusercontent.com/75235167/203462775-c8a33c75-663f-499f-8e5b-0b414834f95c.png)
+
 ### RESULTS : 
 Arduino uno is interfaced with FSR and output values are indicated on a graph.
