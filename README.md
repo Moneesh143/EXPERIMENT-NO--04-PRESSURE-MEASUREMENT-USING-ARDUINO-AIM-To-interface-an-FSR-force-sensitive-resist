@@ -27,7 +27,6 @@ FSRs are basically a resistor that changes its resistive value (in ohms Ω) depe
 
 
 
-
 ### FIGURE 02 FORCE SENSITIVE RESITOR FOIL DISC TYPE  
 
 FSRs are often a polymer with conductive material silk-screened on. That means they're plastic and the connection tab is crimped on somewhat delicate material. The best way to connect to these is to simply plug them into a breadboard.
