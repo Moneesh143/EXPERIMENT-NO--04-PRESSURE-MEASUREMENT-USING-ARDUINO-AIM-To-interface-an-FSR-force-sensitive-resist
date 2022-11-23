@@ -60,6 +60,8 @@ The easiest way to measure a resistive sensor is to connect one end to power and
 
 ### FIGURE-03 CIRCUIT DIAGRAM
 
+![image](https://user-images.githubusercontent.com/75235167/203461646-3c31064a-45e6-42c2-b484-a19dfff2a5c5.png)
+
 
 
 ### PROCEDURE:
@@ -75,27 +77,77 @@ The easiest way to measure a resistive sensor is to connect one end to power and
 10.	Plot the graph for the output voltage vs the resistance 
 
 
-### PROGRAM 
- *your roll no 
- * your name 
- * department and year 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
+### PROGRAM  
+ ```python
+ // C++ code
+//
+#define fsrpin A0
+#define led1 2
+#define led2 3
+#define led3 4
+#define led4 5
+#define led5 6
+#define led6 7
 
-![image](https://user-images.githubusercontent.com/36288975/188804653-a3154e8e-2655-46f2-9dcd-f425dd1ba109.png)
+int fsrreading;
+void setup()
+{
+  Serial.begin(9600);
+  pinMode(led1, OUTPUT);
+  pinMode(led2, OUTPUT);
+  pinMode(led3, OUTPUT);
+  pinMode(led4, OUTPUT);
+  pinMode(led5, OUTPUT);
+  pinMode(led6, OUTPUT);
+}
+
+void loop()
+{
+  fsrreading = analogRead(fsrpin);
+  
+  Serial.println(fsrreading);
+  
+  if(fsrreading > 150)
+  {
+  digitalWrite(led1, HIGH);
+  }
+  else digitalWrite(led1, LOW);
+  
+  if(fsrreading > 300)
+  {
+  digitalWrite(led2, HIGH);
+  }
+  else digitalWrite(led2, LOW);
+  
+  if(fsrreading > 450)
+  {
+  digitalWrite(led3, HIGH);
+  }
+  else digitalWrite(led3, LOW);
+  
+  if(fsrreading > 600)
+  {
+  digitalWrite(led4, HIGH);
+  }
+  else digitalWrite(led4, LOW);
+  
+  if(fsrreading > 750)
+  {
+  digitalWrite(led5, HIGH);
+  }
+  else digitalWrite(led5, LOW);
+  
+  if(fsrreading > 900)
+  {
+  digitalWrite(led6, HIGH);
+  }
+  else digitalWrite(led6, LOW);
+  
+  delay(1000); // Wait for 1000 millisecond(s)
+  digitalWrite(LED_BUILTIN, LOW);
+  delay(1000); // Wait for 1000 millisecond(s)
+}
+```
 
 
 ### TABLE -02 standard deviation table 
@@ -116,17 +168,9 @@ EX:           μ = (1+3+4+7+8) / 5 = 4.6
 σ = √(12.96 + 2.56 + 0.36 + 5.76 + 11.56)/5 = 2.577
 
 
+### OUTPUT :
 
+![image](https://user-images.githubusercontent.com/75235167/203462398-1c32dc4d-a34b-4f22-8535-69a6a6452cf9.png)
 
-
-
-
-
-
-
-
-
-
-
-
-### RESULTS : Arduino uno is interfaced with FSR and output values are indicated on a graph.
+### RESULTS : 
+Arduino uno is interfaced with FSR and output values are indicated on a graph.
