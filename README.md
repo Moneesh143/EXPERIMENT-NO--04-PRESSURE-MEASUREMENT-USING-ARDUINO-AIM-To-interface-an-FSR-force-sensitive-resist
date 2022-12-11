@@ -78,7 +78,7 @@ The easiest way to measure a resistive sensor is to connect one end to power and
 
 ### PROGRAM  
  ```python
- // C++ code
+// C++ code
 //
 #define fsrpin A0
 #define led1 2
@@ -91,60 +91,60 @@ The easiest way to measure a resistive sensor is to connect one end to power and
 int fsrreading;
 void setup()
 {
-  Serial.begin(9600);
-  pinMode(led1, OUTPUT);
-  pinMode(led2, OUTPUT);
-  pinMode(led3, OUTPUT);
-  pinMode(led4, OUTPUT);
-  pinMode(led5, OUTPUT);
-  pinMode(led6, OUTPUT);
+ Serial.begin(9600);
+ pinMode(led1, OUTPUT);
+ pinMode(led2, OUTPUT);
+ pinMode(led3, OUTPUT);
+ pinMode(led4, OUTPUT);
+ pinMode(led5, OUTPUT);
+ pinMode(led6, OUTPUT);
 }
 
 void loop()
 {
-  fsrreading = analogRead(fsrpin);
-  
-  Serial.println(fsrreading);
-  
-  if(fsrreading > 150)
-  {
-  digitalWrite(led1, HIGH);
-  }
-  else digitalWrite(led1, LOW);
-  
-  if(fsrreading > 300)
-  {
-  digitalWrite(led2, HIGH);
-  }
-  else digitalWrite(led2, LOW);
-  
-  if(fsrreading > 450)
-  {
-  digitalWrite(led3, HIGH);
-  }
-  else digitalWrite(led3, LOW);
-  
-  if(fsrreading > 600)
-  {
-  digitalWrite(led4, HIGH);
-  }
-  else digitalWrite(led4, LOW);
-  
-  if(fsrreading > 750)
-  {
-  digitalWrite(led5, HIGH);
-  }
-  else digitalWrite(led5, LOW);
-  
-  if(fsrreading > 900)
-  {
-  digitalWrite(led6, HIGH);
-  }
-  else digitalWrite(led6, LOW);
-  
-  delay(1000); // Wait for 1000 millisecond(s)
-  digitalWrite(LED_BUILTIN, LOW);
-  delay(1000); // Wait for 1000 millisecond(s)
+ fsrreading = analogRead(fsrpin);
+ 
+ Serial.println(fsrreading);
+ 
+ if(fsrreading > 150)
+ {
+ digitalWrite(led1, HIGH);
+ }
+ else digitalWrite(led1, LOW);
+ 
+ if(fsrreading > 300)
+ {
+ digitalWrite(led2, HIGH);
+ }
+ else digitalWrite(led2, LOW);
+ 
+ if(fsrreading > 450)
+ {
+ digitalWrite(led3, HIGH);
+ }
+ else digitalWrite(led3, LOW);
+ 
+ if(fsrreading > 600)
+ {
+ digitalWrite(led4, HIGH);
+ }
+ else digitalWrite(led4, LOW);
+ 
+ if(fsrreading > 750)
+ {
+ digitalWrite(led5, HIGH);
+ }
+ else digitalWrite(led5, LOW);
+ 
+ if(fsrreading > 900)
+ {
+ digitalWrite(led6, HIGH);
+ }
+ else digitalWrite(led6, LOW);
+ 
+ delay(1000); // Wait for 1000 millisecond(s)
+ digitalWrite(LED_BUILTIN, LOW);
+ delay(1000); // Wait for 1000 millisecond(s)
 }
 ```
 
@@ -167,11 +167,13 @@ EX:           μ = (1+3+4+7+8) / 5 = 4.6
 σ = √(12.96 + 2.56 + 0.36 + 5.76 + 11.56)/5 = 2.577
 
 
-### OUTPUT :
+ OUTPUT :
 
-![image](https://user-images.githubusercontent.com/75235167/203462398-1c32dc4d-a34b-4f22-8535-69a6a6452cf9.png)
+![image](https://user-images.githubusercontent.com/97553333/206888420-69bd4553-9502-4b87-8e16-14f9075de068.png)
 
-![image](https://user-images.githubusercontent.com/75235167/203462775-c8a33c75-663f-499f-8e5b-0b414834f95c.png)
 
-### RESULTS : 
+![image](https://user-images.githubusercontent.com/97553333/206888430-82a4be44-f7fe-44f1-8b74-4e124bcc648b.png)
+
+
+RESULTS : 
 Arduino uno is interfaced with FSR and output values are indicated on a graph.
